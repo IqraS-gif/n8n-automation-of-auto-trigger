@@ -1,0 +1,71 @@
+{
+  "name": "My workflow 2",
+  "nodes": [
+    {
+      "parameters": {
+        "authentication": "webhook",
+        "content": "={{ $json.title }}{{ $json.link }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.discord",
+      "typeVersion": 2,
+      "position": [
+        272,
+        -64
+      ],
+      "id": "4e77c8a0-2fe4-47a3-b694-0be2f6ad97f9",
+      "name": "Discord",
+      "webhookId": "1e34b9b2-1db3-4425-be61-2d753f569dc0",
+      "credentials": {
+        "discordWebhookApi": {
+          "id": "VnmeHJVjhMvo93Cs",
+          "name": "Discord Webhook account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyMinute"
+            }
+          ]
+        },
+        "feedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCxR_Nm_MafUQD36R1k8Z01w"
+      },
+      "type": "n8n-nodes-base.rssFeedReadTrigger",
+      "typeVersion": 1,
+      "position": [
+        64,
+        -64
+      ],
+      "id": "01d778e1-22fd-4251-b291-833e1c93827d",
+      "name": "RSS Feed Trigger"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "RSS Feed Trigger": {
+      "main": [
+        [
+          {
+            "node": "Discord",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "a10c94d4-5769-42c2-adb0-0638b3cb6ceb",
+  "meta": {
+    "instanceId": "8e9b2ecf73ae37a5b3483fd0595dcb1516642e3362b92d686c7c87a8989b4d04"
+  },
+  "id": "8rEq1E0f6lPe0ieC",
+  "tags": []
+}
