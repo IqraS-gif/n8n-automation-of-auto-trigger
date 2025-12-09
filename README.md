@@ -1,5 +1,8 @@
 # **YouTube → Discord Auto-Posting Automation (n8n)**
 
+[See demo video + Explanation](https://drive.google.com/file/d/1G7qaHq3voi5opv3j_PCcrbtnToXNPUYG/view?usp=sharing)
+
+
 This repository contains **two n8n workflows** that automate posting YouTube channel updates directly to a Discord server using a webhook.
 
 Both workflows fetch new videos from a YouTube RSS feed and send them into a Discord channel.
