@@ -147,5 +147,3 @@ Your Discord channel should receive:
 <Video Link>
 ```
 
-
-Just tell me!
